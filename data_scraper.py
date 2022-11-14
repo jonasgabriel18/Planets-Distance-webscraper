@@ -23,7 +23,7 @@ for planet in planets:
             linha = lines.replace("[", '').replace("]", '').split(',') #Clean the line and split into datetime, magnitude and distance
             data = linha[0][4:-2] #Get only the datetime
             
-            if int(data[0:4]) <= 2025 and (data[5:7] == "01" or data[5:7] == "07"): #read only 12 years of data twice a year
+            if int(data[0:4]) <= 2025: #read only 12 years of data twice a year
                 if data[5:7] == "01" and not janeiro:
                     distances[data] = linha[2]
                     janeiro = True
