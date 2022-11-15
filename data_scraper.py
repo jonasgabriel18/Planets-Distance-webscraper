@@ -33,6 +33,5 @@ for planet in planets:
                     julho = True
                     janeiro = False
             
-    result = json.dumps(distances) #Save the dict as a json
-    with open(f"{planet}.json", "w") as file:
-        file.write(result)
+    with open(f"{planet}.json", "w") as output_file:
+        json.dump(distances, output_file, indent=2)  #Save the dict as a json
